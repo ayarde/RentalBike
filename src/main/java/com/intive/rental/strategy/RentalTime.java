@@ -1,7 +1,7 @@
 package com.intive.rental.strategy;
 
 
-public interface RentalTime<T extends Number> {
+public interface RentalTime {
 
-    Double rent(T time);
+    Double rent();
 }

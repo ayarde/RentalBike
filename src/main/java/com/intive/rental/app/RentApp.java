@@ -19,20 +19,19 @@ public class RentApp {
 
         RentalHour rentalHour = new RentalHour();
         RentalBike hourContext = new RentalBike(rentalHour);
-        Double cost1 = hourContext.rentByTime(2.0);
-        rentalHour.setRentalTotalCost(cost1);
-
+        rentalHour.setRentalTime(2.0);
+        Double costByHour = hourContext.rentByTime();
 
         RentalDay rentalDay = new RentalDay();
         RentalBike dayContext = new RentalBike(rentalDay);
-        Double cost2 = dayContext.rentByTime(2.0);
-        rentalDay.setRentalTotalCost(cost2);
+        rentalDay.setRentalTime(2.0);
+        Double costByDay = dayContext.rentByTime();
 
 
         RentalWeek rentalWeek = new RentalWeek();
         RentalBike weekContext = new RentalBike(rentalWeek);
-        Double cost3 = weekContext.rentByTime(1.0);
-        rentalWeek.setRentalTotalCost(cost3);
+        rentalWeek.setRentalTime(1.0);
+        Double costByWeek = weekContext.rentByTime();
 
         rentalTimeList.add(rentalHour);
         rentalTimeList.add(rentalDay);
@@ -41,9 +40,9 @@ public class RentApp {
         FamilyRental familyRental = new FamilyRental();
         RentalBike familyRentalContext = new RentalBike(familyRental);
 
-        System.out.println("Rental Hour Total Cost: $"+ rentalHour.getRentalTotalCost());
-        System.out.println("Rental Day Total Cost: $"+ rentalDay.getRentalTotalCost());
-        System.out.println("Rental Week Total Cost: $"+ rentalWeek.getRentalTotalCost());
+        System.out.println("Rental Hour Total Cost: $"+ costByHour);
+        System.out.println("Rental Day Total Cost: $"+ costByDay);
+        System.out.println("Rental Week Total Cost: $"+ costByWeek);
         System.out.println("Family Rental Total Cost: $"+ familyRentalContext.rentWithPromotion(rentalTimeList));
     }
 }

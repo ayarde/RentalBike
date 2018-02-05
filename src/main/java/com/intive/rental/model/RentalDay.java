@@ -2,22 +2,22 @@ package com.intive.rental.model;
 
 import com.intive.rental.strategy.RentalTime;
 
-public class RentalDay implements RentalTime <Double>{
+public class RentalDay implements RentalTime {
 
     private static final double PRICE_PER_DAY = 20;
 
-    private Double rentalTotalCost;
+    private Double rentalTime;
 
-    public Double getRentalTotalCost() {
-        return rentalTotalCost;
+    public Double getRentalTime() {
+        return rentalTime;
     }
 
-    public void setRentalTotalCost(Double rentalTotalCost) {
-        this.rentalTotalCost = rentalTotalCost;
+    public void setRentalTime(Double rentalTime) {
+        this.rentalTime = rentalTime;
     }
 
     @Override
-    public Double rent(Double time) {
-        return time * PRICE_PER_DAY;
+    public Double rent() {
+        return this.rentalTime * PRICE_PER_DAY;
     }
 }

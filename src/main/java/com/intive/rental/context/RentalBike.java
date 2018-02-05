@@ -3,7 +3,6 @@ package com.intive.rental.context;
 import com.intive.rental.strategy.RentalPromotion;
 import com.intive.rental.strategy.RentalTime;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 public class RentalBike {
@@ -19,13 +18,13 @@ public class RentalBike {
         this.rentalPromotion = rentalPromotion;
     }
 
-    public Double rentByTime(Double time){
+    public Double rentByTime(){
 
-        return rentalTime.rent(time);
+        return rentalTime.rent();
 
     }
 
-    public Double rentWithPromotion(List<RentalTime> rentalTimeList) throws InvocationTargetException, NoSuchMethodException, IllegalAccessException, NoSuchFieldException {
+    public Double rentWithPromotion(List<RentalTime> rentalTimeList) {
 
         return rentalPromotion.familyRent(rentalTimeList);
 

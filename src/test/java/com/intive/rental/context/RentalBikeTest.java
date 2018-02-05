@@ -22,20 +22,20 @@ public class RentalBikeTest {
 
         RentalHour rentalHour = new RentalHour();
         RentalBike hourContext = new RentalBike(rentalHour);
-        Double cost1 = hourContext.rentByTime(2.0);
-        rentalHour.setRentalTotalCost(cost1);
+        rentalHour.setRentalTime(2.0);
+        Double cost1 = hourContext.rentByTime();
 
 
         RentalDay rentalDay = new RentalDay();
         RentalBike dayContext = new RentalBike(rentalDay);
-        Double cost2 = dayContext.rentByTime(2.0);
-        rentalDay.setRentalTotalCost(cost2);
+        rentalDay.setRentalTime(2.0);
+        Double cost2 = dayContext.rentByTime();
 
 
         RentalWeek rentalWeek = new RentalWeek();
         RentalBike weekContext = new RentalBike(rentalWeek);
-        Double cost3 = weekContext.rentByTime(1.0);
-        rentalWeek.setRentalTotalCost(cost3);
+        rentalWeek.setRentalTime(1.0);
+        Double cost3 = weekContext.rentByTime();
 
         rentalTimeList.add(rentalHour);
         rentalTimeList.add(rentalDay);
@@ -56,14 +56,14 @@ public class RentalBikeTest {
 
         RentalHour rentalHour = new RentalHour();
         RentalBike hourContext = new RentalBike(rentalHour);
-        Double cost1 = hourContext.rentByTime(2.0);
-        rentalHour.setRentalTotalCost(cost1);
+        rentalHour.setRentalTime(2.0);
+        Double cost1 = hourContext.rentByTime();
 
 
         RentalDay rentalDay = new RentalDay();
         RentalBike dayContext = new RentalBike(rentalDay);
-        Double cost2 = dayContext.rentByTime(2.0);
-        rentalDay.setRentalTotalCost(cost2);
+        rentalDay.setRentalTime(2.0);
+        Double cost2 = dayContext.rentByTime();
 
 
         rentalTimeList.add(rentalHour);
